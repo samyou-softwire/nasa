@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7efa605-8eb4-4e49-8278-3ca2a8dae3df" name="Changes" comment="split rover endpoint into a new file">
-      <change afterPath="$PROJECT_DIR$/src/photos.ts" afterDir="false" />
+    <list default="true" id="a7efa605-8eb4-4e49-8278-3ca2a8dae3df" name="Changes" comment="clean up a bit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/photos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/photos.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697814506777</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="clean up a bit">
+      <option name="closed" value="true" />
+      <created>1697814808590</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1697814808590</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +180,7 @@
     <MESSAGE value="clean up gitignore" />
     <MESSAGE value="iml" />
     <MESSAGE value="split rover endpoint into a new file" />
-    <option name="LAST_COMMIT_MESSAGE" value="split rover endpoint into a new file" />
+    <MESSAGE value="clean up a bit" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean up a bit" />
   </component>
 </project>

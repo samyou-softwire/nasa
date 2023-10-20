@@ -74,22 +74,13 @@ export function addPhotosEndpoint(router: Router) {
             return;
         }
 
-        const src = response.data.photos[0].img_src;
+        const data = response.data.photos.map(photo => ({
+            src: photo.img_src,
+            camera: photo.camera.name,
+            rover: photo.rover.name,
+            id: photo.id
+        }));
 
-        // quick html document
-        const html = `<!doctype html>
-        <html lang="en">
-        <head>
-        <meta charset="UTF-8">
-             <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-             <meta http-equiv="X-UA-Compatible" content="ie=edge">
-             <title>Your Image</title>
-        </head>
-        <body>
-             <img src="${src}" alt="mars image">
-        </body>
-        </html>`;
-
-        res.send(html);
+        res.send(data);
     });
 }

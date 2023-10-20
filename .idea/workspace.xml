@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7efa605-8eb4-4e49-8278-3ca2a8dae3df" name="Changes" comment="clean up gitignore">
-      <change afterPath="$PROJECT_DIR$/src/rovers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.ts" afterDir="false" />
+    <list default="true" id="a7efa605-8eb4-4e49-8278-3ca2a8dae3df" name="Changes" comment="split rover endpoint into a new file">
+      <change afterPath="$PROJECT_DIR$/src/photos.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +44,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "part-2",
+    "git-widget-placeholder": "part-3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -124,7 +122,31 @@
       <option name="project" value="LOCAL" />
       <updated>1697814196625</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="iml">
+      <option name="closed" value="true" />
+      <created>1697814480261</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1697814480261</updated>
+    </task>
+    <task id="LOCAL-00007" summary="split rover endpoint into a new file">
+      <option name="closed" value="true" />
+      <created>1697814492939</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1697814492939</updated>
+    </task>
+    <task id="LOCAL-00008" summary="split rover endpoint into a new file">
+      <option name="closed" value="true" />
+      <created>1697814506777</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1697814506777</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +168,8 @@
     <MESSAGE value="add tsconfig" />
     <MESSAGE value="add rover photos endpoint" />
     <MESSAGE value="clean up gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean up gitignore" />
+    <MESSAGE value="iml" />
+    <MESSAGE value="split rover endpoint into a new file" />
+    <option name="LAST_COMMIT_MESSAGE" value="split rover endpoint into a new file" />
   </component>
 </project>

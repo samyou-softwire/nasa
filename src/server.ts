@@ -1,11 +1,10 @@
 import express from "express";
 import {addRoverEndpoint} from "./rovers";
 
-
 const app = express();
 const port = 8000;
 
-export interface Welcome {
+export interface Rovers {
     rovers: Rover[];
 }
 

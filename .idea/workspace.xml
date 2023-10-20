@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7efa605-8eb4-4e49-8278-3ca2a8dae3df" name="Changes" comment="clean up a bit">
+    <list default="true" id="a7efa605-8eb4-4e49-8278-3ca2a8dae3df" name="Changes" comment="add photos endpoint">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/photos.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/photos.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +155,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697814808590</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add photos endpoint">
+      <option name="closed" value="true" />
+      <created>1697815960437</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1697815960437</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +188,7 @@
     <MESSAGE value="iml" />
     <MESSAGE value="split rover endpoint into a new file" />
     <MESSAGE value="clean up a bit" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean up a bit" />
+    <MESSAGE value="add photos endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="add photos endpoint" />
   </component>
 </project>

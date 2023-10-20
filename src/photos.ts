@@ -1,6 +1,5 @@
 import {Router} from "express";
-import axios, {AxiosResponse} from "axios";
-import {Rovers} from "./server";
+import axios from "axios";
 import { config } from "dotenv"
 config();
 const API_KEY = <string>process.env.API_KEY;
@@ -56,13 +55,24 @@ export function addPhotosEndpoint(router: Router) {
         const { roverName, camera } = req.params;
         const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/${roverName}/photos`
 
-        const response: AxiosResponse<PhotosResponse> = await axios.get(url, {
+        const response: { data: PhotosResponse } = await axios.get(url, {
             params: {
                 sol: 1000,
                 camera: camera,
                 api_key: API_KEY
             }
+        }).catch(_ => {
+            return {
+                data: {
+                    photos: []
+                }
+            }
         });
+
+        if (response.data.photos.length === 0) {
+            res.send("bad");
+            return;
+        }
 
         const src = response.data.photos[0].img_src;
 
@@ -76,7 +86,7 @@ export function addPhotosEndpoint(router: Router) {
              <title>Your Image</title>
         </head>
         <body>
-             <img src="${src}">
+             <img src="${src}" alt="mars image">
         </body>
         </html>`;
 

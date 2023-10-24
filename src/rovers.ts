@@ -1,5 +1,5 @@
 import {Router} from "express";
-import axios, {AxiosResponse} from "axios";
+import axios from "axios";
 import {Welcome} from "./server";
 import { config } from "dotenv"
 config();

@@ -1,11 +1,11 @@
 import express from "express";
 import {addRoverEndpoint} from "./rovers";
-
+import {addPhotosEndpoint} from "./photos";
 
 const app = express();
 const port = 8000;
 
-export interface Welcome {
+export interface Rovers {
     rovers: Rover[];
 }
 
@@ -30,6 +30,7 @@ app.use(express.json());
 const router = express.Router();
 
 addRoverEndpoint(router);
+addPhotosEndpoint(router);
 
 app.use('/', router);
 

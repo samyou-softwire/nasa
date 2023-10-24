@@ -1,6 +1,7 @@
 import express from "express";
 import {addRoverEndpoint} from "./rovers";
 import {addPhotosEndpoint} from "./photos";
+import {addCamerasEndpoint} from "./cameras";
 
 const app = express();
 const port = 8000;
@@ -31,6 +32,7 @@ const router = express.Router();
 
 addRoverEndpoint(router);
 addPhotosEndpoint(router);
+addCamerasEndpoint(router);
 
 app.use('/', router);
 

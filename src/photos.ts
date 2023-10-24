@@ -1,5 +1,5 @@
 import {Router} from "express";
-import axios from "axios";
+import axios, {AxiosError} from "axios";
 import { config } from "dotenv"
 config();
 const API_KEY = <string>process.env.API_KEY;
@@ -51,36 +51,41 @@ export type Status = "active";
 
 
 export function addPhotosEndpoint(router: Router) {
-    router.get('/rovers/:roverName/photos/:camera', async (req, res) => {
+    router.get('/rovers/:roverName/cameras/:camera/photos', async (req, res, next) => {
         const { roverName, camera } = req.params;
         const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/${roverName}/photos`
 
-        const response = await axios.get<PhotosResponse>(url, {
-            params: {
-                sol: 1000,
-                camera: camera,
-                api_key: API_KEY
-            }
-        }).catch(_ => {
-            return {
-                data: {
-                    photos: []
+        try {
+            const response = await axios.get<PhotosResponse>(url, {
+                params: {
+                    sol: 1000,
+                    camera: camera,
+                    api_key: API_KEY
                 }
+            });
+
+            if (response.data.photos.length === 0) {
+                res.status(404);
+                res.send("could not find this camera");
+                return;
             }
-        });
 
-        if (response.data.photos.length === 0) {
-            res.send("bad");
-            return;
+            const data = response.data.photos.map(photo => ({
+                src: photo.img_src,
+                camera: photo.camera.name,
+                rover: photo.rover.name,
+                id: photo.id
+            }));
+
+            res.send(data);
+        } catch (e) {
+            if (e instanceof AxiosError) {
+                res.status(404);
+                res.send("could not find this rover");
+                return;
+            }
+
+            next(e);
         }
-
-        const data = response.data.photos.map(photo => ({
-            src: photo.img_src,
-            camera: photo.camera.name,
-            rover: photo.rover.name,
-            id: photo.id
-        }));
-
-        res.send(data);
     });
 }

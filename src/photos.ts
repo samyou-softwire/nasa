@@ -37,10 +37,10 @@ export interface Rover {
     max_sol:      number;
     max_date:     Date;
     total_photos: number;
-    cameras:      CameraElement[];
+    cameras:      RoverCamera[];
 }
 
-export interface CameraElement {
+export interface RoverCamera {
     name:      CameraName;
     full_name: FullName;
 }

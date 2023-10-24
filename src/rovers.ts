@@ -11,6 +11,11 @@ export function addRoverEndpoint(router: Router) {
             `https://api.nasa.gov/mars-photos/api/v1/rovers?api_key=${API_KEY}`
         )
 
-        res.json(response.data.rovers);
+        const data = response.data.rovers.map(rover => ({
+            id: rover.id,
+            name: rover.name
+        }))
+
+        res.json(data);
     });
 }

@@ -70,12 +70,7 @@ export function addPhotosEndpoint(router: Router) {
                 return;
             }
 
-            const data = response.data.photos.map(photo => ({
-                src: photo.img_src,
-                camera: photo.camera.name,
-                rover: photo.rover.name,
-                id: photo.id
-            }));
+            const data = response.data.photos.map(photo => photo.img_src);
 
             res.send(data);
         } catch (e) {

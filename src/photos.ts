@@ -55,7 +55,7 @@ export function addPhotosEndpoint(router: Router) {
         const { roverName, camera } = req.params;
         const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/${roverName}/photos`
 
-        const response: { data: PhotosResponse } = await axios.get(url, {
+        const response = await axios.get<PhotosResponse>(url, {
             params: {
                 sol: 1000,
                 camera: camera,

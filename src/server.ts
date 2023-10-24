@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import {addRoverEndpoint} from "./rovers";
 import {addPhotosEndpoint} from "./photos";
 import {addCamerasEndpoint} from "./cameras";
@@ -28,6 +29,7 @@ export interface Camera {
 }
 
 app.use(express.json());
+app.use(cors());
 const router = express.Router();
 
 addRoverEndpoint(router);
